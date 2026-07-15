@@ -4,6 +4,13 @@ A Gen AI project designed to analyze news articles using NLP (Natural Language P
 
 ---
 
+## 🔗 Live Demo / Deployment Link
+
+The application is deployed and live at:
+👉 **[genaiproject-usfs6sn83qvodjlkswkqmw.streamlit.app](https://genaiproject-usfs6sn83qvodjlkswkqmw.streamlit.app/)**
+
+---
+
 ## 📁 Project Structure
 
 ```text

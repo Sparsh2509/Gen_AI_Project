@@ -28,7 +28,6 @@ if env_key == "your_groq_api_key_here":
 
 if env_key:
     api_key = env_key
-    st.success("✅ Groq API Key loaded from .env")
 else:
     api_key = st.text_input(
         "🔑 Enter your Groq API Key:",
