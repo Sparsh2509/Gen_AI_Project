@@ -14,7 +14,7 @@ The application is deployed and live at:
 ## 📁 Project Structure
 
 ```text
-news_summarizer/
+Gen_AI_Project/
 ├── app.py           → Main Streamlit dashboard (UI, preprocessing & pipeline)
 ├── summarizer.py    → Bullet-point news summarization (LangChain + Groq Llama-3.3)
 ├── sentiment.py     → Sentiment analysis pipeline (Hugging Face DistilBERT)
@@ -52,7 +52,7 @@ python -m venv .venv
 ```
 
 ### 2. Install Project Dependencies
-Run the installation command inside the `news_summarizer` directory:
+Run the installation command inside the root directory:
 ```bash
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
