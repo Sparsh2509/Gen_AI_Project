@@ -208,5 +208,7 @@ if st.session_state.analyzed:
             st.markdown(f"**Q:** {item['q']}")
             st.markdown(f"**A:** {item['a']}")
             st.markdown("---")
-else:
-    st.info("👆 Paste a news article above and click **Analyze Article** to begin.")
+
+# Show instructions only when not analyzed and button is not clicked
+if not st.session_state.analyzed and not analyze_btn:
+    st.info("👆 Paste a news article above and click Analyze Article to begin.")
