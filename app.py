@@ -21,19 +21,8 @@ st.set_page_config(
 st.title("📰 Intelligent News Summarization and Sentiment Analysis System")
 st.markdown("Paste a news article below and click **Analyze** to extract insights using AI and NLP.")
 
-# Load API key
-env_key = os.getenv("GROQ_API_KEY", "")
-if env_key == "your_groq_api_key_here":
-    env_key = ""
-
-if env_key:
-    api_key = env_key
-else:
-    api_key = st.text_input(
-        "🔑 Enter your Groq API Key:",
-        type="password",
-        help="Get your free key at https://console.groq.com/keys"
-    )
+# Load API key silently from environment (e.g. .env or Streamlit Secrets)
+api_key = os.getenv("GROQ_API_KEY", "")
 
 st.markdown("---")
 
@@ -90,7 +79,7 @@ if analyze_btn:
     if not article_input.strip():
         st.warning("⚠️ Please paste a news article before clicking Analyze.")
     elif not api_key:
-        st.error("❌ Please enter your Groq API Key above.")
+        st.error("❌ Groq API Key not found. Please configure the GROQ_API_KEY in your environment/secrets.")
     else:
         with st.spinner("Running NLP pipeline..."):
             st.session_state.article = article_input
